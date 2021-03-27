@@ -10,7 +10,16 @@ html
             li item 3
         .otherClass 
             p this is some text
-        input(type="password")
+        input(type="password" disabled="true")
         - const myClasses = ['class1', 'class2', 'class3']
         div(class=myClasses)
             p some more text
+        
+        - const myAttributes = {"color":"red", "border-color":"green"}
+        div&attributes(myAttributes)
+        h3 For/Each Loop
+        each n, i in [10, 20, 30, 40, 50]
+            p= n + ' is at index  ' +  i
+        - let user = { name: "Rushabh", isLoggedIn: "false"}
+        if user.isLoggedIn
+            p Welcome back #{user.name}
