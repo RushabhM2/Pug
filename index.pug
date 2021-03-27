@@ -20,6 +20,15 @@ html
         h3 For/Each Loop
         each n, i in [10, 20, 30, 40, 50]
             p= n + ' is at index  ' +  i
-        - let user = { name: "Rushabh", isLoggedIn: "false"}
+        - let user = { name: "Rushabh", isLoggedIn: false}
         if user.isLoggedIn
             p Welcome back #{user.name}
+        else 
+            p Please Log In
+        .caseStatements
+            - const orderStatus = "moving"
+            case orderStatus
+                when 'pending'
+                    p Your order has been placed 
+                when 'moving'
+                    p your order is on the move
