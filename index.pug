@@ -2,4 +2,15 @@ doctype html
 html
     head
     body
-        h1 Welcome to my life
+        h1#idName Welcome to my life
+        p.className this is some text 
+        ul 
+            li Item 1
+            li item 2
+            li item 3
+        .otherClass 
+            p this is some text
+        input(type="password")
+        - const myClasses = ['class1', 'class2', 'class3']
+        div(class=myClasses)
+            p some more text
